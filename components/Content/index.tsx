@@ -2,6 +2,7 @@ import React from 'react'
 import { colors } from '../design/constants'
 import { DropSection } from './DropSection'
 import { MarketSection } from './MarketSection'
+import { SalesSection } from './SalesSection'
 
 export function Content() {
   return (
@@ -17,7 +18,7 @@ export function Content() {
 
       <MarketSection />
 
-      {/* <SalesSection /> */}
+      <SalesSection />
 
       {/* <NewsSection /> */}
     </div>
