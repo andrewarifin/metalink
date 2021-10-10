@@ -1,7 +1,12 @@
 import React, { useState } from 'react'
 import { FiMail, FiMessageSquare, FiTrendingUp } from 'react-icons/fi'
-import { colors } from '../design/constants'
+import {
+  colors,
+  NAV_BAR_HEIGHT,
+  SIDE_NAV_WIDTH,
+} from '../design/constants'
 import { RoundedIcon } from '../design/Icon'
+import { Line } from '../design/Line'
 import { ChannelButton } from './ChannelButton'
 import { ServerSection } from './ServerSection'
 import { SideNavButton } from './SideNavButton'
@@ -34,8 +39,10 @@ export function SideNav() {
         display: 'flex',
         flexDirection: 'column',
         height: '100vh',
-        maxWidth: 350,
         padding: 6,
+        position: 'fixed',
+        top: NAV_BAR_HEIGHT,
+        width: SIDE_NAV_WIDTH,
       }}
     >
       {navButtons.map((button) => (
@@ -49,13 +56,7 @@ export function SideNav() {
         />
       ))}
 
-      <hr
-        css={{
-          borderColor: colors.lightGrey,
-          margin: '10px 0px',
-          opacity: '50%',
-        }}
-      />
+      <Line />
 
       <ServerSection
         channels={[
@@ -73,6 +74,7 @@ export function SideNav() {
             name: 'gm',
           },
         ]}
+        hasTimerModule
         icon={<RoundedIcon src="./crypto-punk-logo.png" />}
         name="CryptoPunks"
       />

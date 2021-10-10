@@ -2,7 +2,16 @@ import Image from 'next/image'
 import React from 'react'
 import { colors } from '../../design/constants'
 
-export function SalesCard() {
+export type Sale = {
+  collection: string
+  item: string
+  thumbnail: string
+  time: string
+  price: string
+}
+
+export function SalesCard({ sale }: { sale: Sale }) {
+  const { collection, item, thumbnail, time, price } = sale
   return (
     <div
       css={{
@@ -10,20 +19,33 @@ export function SalesCard() {
         borderRadius: 8,
         display: 'grid',
         gridTemplateRows: '3fr 1fr',
+        maxWidth: '1fr',
         padding: 8,
         rowGap: 4,
       }}
     >
-      <div css={{ padding: '0px 24px' }}>
+      <div
+        css={{
+          alignItems: 'center',
+          display: 'flex',
+          padding: '0px 24px',
+        }}
+      >
         <Image
           alt="Sale Thumbnail"
-          height={50}
-          src="/bayc-logo.png"
-          width={50}
+          height={300}
+          src={thumbnail}
+          width={300}
         />
       </div>
 
-      <div css={{ display: 'flex', flexDirection: 'column' }}>
+      <div
+        css={{
+          display: 'flex',
+          flexDirection: 'column',
+          flexGrow: 0,
+        }}
+      >
         <span
           css={{
             color: colors.darkGrey,
@@ -31,11 +53,21 @@ export function SalesCard() {
             fontWeight: 'bold',
           }}
         >
-          Collection
+          {collection}
         </span>
 
-        <span css={{ fontWeight: 'bolder', marginBottom: 4 }}>
-          Item
+        <span
+          css={{
+            display: 'inline-block',
+            fontWeight: 'bolder',
+            marginBottom: 4,
+            maxWidth: '100%',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            whiteSpace: 'nowrap',
+          }}
+        >
+          {item}
         </span>
 
         <div
@@ -45,10 +77,10 @@ export function SalesCard() {
             justifyContent: 'space-between',
           }}
         >
-          <span css={{ fontSize: 12 }}>Price</span>
+          <span css={{ fontSize: 12 }}>{price}</span>
 
           <span css={{ color: colors.darkGrey, fontSize: 10 }}>
-            Time ago
+            {time}
           </span>
         </div>
       </div>

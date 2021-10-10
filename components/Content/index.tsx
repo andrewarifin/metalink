@@ -1,7 +1,12 @@
 import React from 'react'
-import { colors } from '../design/constants'
+import {
+  colors,
+  NAV_BAR_HEIGHT,
+  SIDE_NAV_WIDTH,
+} from '../design/constants'
 import { DropSection } from './DropSection'
 import { MarketSection } from './MarketSection'
+import { NewsSection } from './NewsSection'
 import { SalesSection } from './SalesSection'
 
 export function Content() {
@@ -11,6 +16,7 @@ export function Content() {
         backgroundColor: colors.backgroundColor,
         display: 'flex',
         flexDirection: 'column',
+        marginLeft: SIDE_NAV_WIDTH,
         padding: '24px 48px',
       }}
     >
@@ -20,7 +26,7 @@ export function Content() {
 
       <SalesSection />
 
-      {/* <NewsSection /> */}
+      <NewsSection />
     </div>
   )
 }

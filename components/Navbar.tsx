@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, ButtonType, RoundButton } from './design/Button'
+import { Button, RoundButton } from './design/Button'
 import Image from 'next/image'
 
 import {
@@ -15,10 +15,13 @@ export function Navbar() {
   return (
     <div
       css={{
+        backgroundColor: 'white',
         borderBottom: `1px solid ${colors.lightGrey}`,
         display: 'grid',
         gridTemplateColumns: '1fr 1fr 1fr',
         padding: '12px',
+        position: 'sticky',
+        top: 0,
       }}
     >
       <a
@@ -57,9 +60,11 @@ export function Navbar() {
           <FiChevronLeft css={{ color: 'black' }} />
         </RoundButton>
 
-        <RoundButton>
-          <FiChevronRight css={{ color: 'black' }} />
-        </RoundButton>
+        <div css={{ margin: '0px 12px' }}>
+          <RoundButton>
+            <FiChevronRight css={{ color: 'black' }} />
+          </RoundButton>
+        </div>
 
         <Input placeholder="NFTs, channels, and users..." />
       </div>
@@ -70,7 +75,9 @@ export function Navbar() {
           justifyContent: 'flex-end',
         }}
       >
-        <RoundedIcon src="./avatar.png" />
+        <div css={{ marginRight: 12 }}>
+          <RoundedIcon src="./avatar.png" />
+        </div>
 
         <RoundButton>
           <FiChevronDown css={{ color: 'black' }} />

@@ -18,7 +18,7 @@ export function MarketSection() {
       volume: 7720,
     },
     {
-      dayChange: 24.4,
+      dayChange: -24.4,
       floor: -5.5,
       icon: 'bayc-logo.png',
       name: 'Art Blocks Curated',
@@ -32,7 +32,7 @@ export function MarketSection() {
       volume: 7720,
     },
     {
-      dayChange: 24.4,
+      dayChange: -24.4,
       floor: -5.5,
       icon: 'bayc-logo.png',
       name: 'Art Blocks Curated',

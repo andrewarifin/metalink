@@ -3,6 +3,7 @@ import { FiHash, FiLock } from 'react-icons/fi'
 import { colors } from '../../design/constants'
 import { RoundedIcon } from '../../design/Icon'
 import { ChannelButton } from '../ChannelButton'
+import { ChatTimer } from './ChatTimer'
 
 export type Channel = {
   name: string
@@ -30,7 +31,7 @@ export function ServerSection({
         onClick={() => setExpanded(!expanded)}
       />
 
-      <div>{hasTimerModule && <>timer</>}</div>
+      <div>{hasTimerModule && <ChatTimer />}</div>
 
       <div
         css={{

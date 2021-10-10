@@ -1,7 +1,12 @@
 import React from 'react'
-import { SalesCards } from './SalesCards'
 
-export function SalesSection() {
+export function ContentSection({
+  title,
+  children,
+}: {
+  title: string
+  children: React.ReactNode
+}) {
   return (
     <div css={{ marginTop: 36 }}>
       <div css={{ marginBottom: 24 }}>
@@ -11,11 +16,11 @@ export function SalesSection() {
             fontWeight: 'bolder',
           }}
         >
-          Top NFT Sales
+          {title}
         </span>
       </div>
 
-      <SalesCards />
+      {children}
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import moment from 'moment'
 import React from 'react'
 import { colors } from '../../design/constants'
+import { Line } from '../../design/Line'
 import { TableRow } from './TableRow'
 
 export type MarketData = {
@@ -44,13 +45,7 @@ export function MarketCard({ title, date, data }: Props) {
         </span>
       </div>
 
-      <hr
-        css={{
-          borderColor: colors.lightGrey,
-          margin: '16px 0px',
-          width: '100%',
-        }}
-      />
+      <Line />
 
       <div
         css={{

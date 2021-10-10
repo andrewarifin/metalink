@@ -14,12 +14,7 @@ export function Homepage() {
     >
       <Navbar />
 
-      <div
-        css={{
-          display: 'grid',
-          gridTemplateColumns: '2fr 8fr',
-        }}
-      >
+      <div>
         <SideNav />
 
         <Content />
