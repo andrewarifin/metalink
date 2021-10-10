@@ -16,9 +16,10 @@ export function Content() {
         backgroundColor: colors.backgroundColor,
         display: 'flex',
         flexDirection: 'column',
-        height: '100%',
+        height: 'fit-content',
         marginLeft: SIDE_NAV_WIDTH,
         marginTop: NAV_BAR_HEIGHT,
+        minHeight: '100%',
         padding: '24px 48px',
       }}
     >

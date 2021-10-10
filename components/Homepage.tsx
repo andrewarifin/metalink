@@ -14,12 +14,10 @@ export function Homepage() {
     >
       <Navbar />
 
-      <div>
+      <div css={{ height: '100%' }}>
         <SideNav />
 
         <Content />
-
-        <div></div>
       </div>
     </div>
   )
