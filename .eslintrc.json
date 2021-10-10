@@ -1,6 +1,24 @@
 {
-  "extends": "next/core-web-vitals",
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:react/recommended",
+    "prettier"
+  ],
+  "plugins": ["prettier", "sort-keys-fix"],
   "rules": {
-    "object-property-newline": "error"
+    "sort-keys-fix/sort-keys-fix": "warn",
+    "prettier/prettier": ["error"],
+    // "object-property-newline": "error",
+    "react/jsx-sort-props": [
+      1
+    ],
+    // "react/jsx-max-props-per-line": [
+    //   1
+    // ],
+    "react/jsx-newline": [
+      1
+    ],
+    "react/jsx-first-prop-new-line": 1
+    // "object-curly-newline": ["error", { "minProperties": 2 }]
   }
 }
