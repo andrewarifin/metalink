@@ -1,14 +1,16 @@
-import React from 'react';
+import React from 'react'
 
 export function RoundedIcon({ src }: { src: string }) {
   return (
-    <div css={{
-      borderRadius: '10px',
-      backgroundImage: `url(${src})`,
-      backgroundSize: '30px 30px',
-      backgroundRepeat: 'no-repeat',
-      height: '30px',
-      width: '30px',
-    }} />
+    <div
+      css={{
+        backgroundImage: `url(${src})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '30px 30px',
+        borderRadius: '10px',
+        height: '30px',
+        width: '30px',
+      }}
+    />
   )
 }
