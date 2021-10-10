@@ -32,5 +32,5 @@ export function useFetchInitialArticles({
     }
 
     fetchNewsArticles()
-  }, [])
+  }, [setIsFetching, setNewsArticles])
 }
