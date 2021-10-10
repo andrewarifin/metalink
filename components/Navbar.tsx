@@ -7,7 +7,7 @@ import {
   FiChevronLeft,
   FiChevronRight,
 } from 'react-icons/fi'
-import { colors } from './design/constants'
+import { colors, NAV_BAR_HEIGHT } from './design/constants'
 import { Input } from './design/Input'
 import { RoundedIcon } from './design/Icon'
 
@@ -19,9 +19,12 @@ export function Navbar() {
         borderBottom: `1px solid ${colors.lightGrey}`,
         display: 'grid',
         gridTemplateColumns: '1fr 1fr 1fr',
+        height: NAV_BAR_HEIGHT,
         padding: '12px',
-        position: 'sticky',
+        position: 'fixed',
         top: 0,
+        width: '100%',
+        zIndex: 1,
       }}
     >
       <a

@@ -16,7 +16,9 @@ export function Content() {
         backgroundColor: colors.backgroundColor,
         display: 'flex',
         flexDirection: 'column',
+        height: '100%',
         marginLeft: SIDE_NAV_WIDTH,
+        marginTop: NAV_BAR_HEIGHT,
         padding: '24px 48px',
       }}
     >
